@@ -1,5 +1,5 @@
 
-function saveUser(){
+function saveUser(param){
 
 var xhr= new XMLHttpRequest();
 xhr.onreadystatechange = function(){
@@ -23,13 +23,13 @@ xhr.onreadystatechange = function(){
     petit_enfant2.type= "submit";
     petit_enfant2.value="M";
     petit_enfant2.onclick=function(){
-      Update(obj[0].id);
+      Update(obj[0].id,param+1);
     }
     var petit_enfant3=document.createElement("input");
     petit_enfant3.type= "submit";
     petit_enfant3.value="X";
     petit_enfant3.onclick=function(){
-      Delete(obj[0].id);
+      Delete(obj[0].id,param+1);
     }
 
     enfant1.innerHTML=document.getElementById("Nom").value;

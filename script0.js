@@ -43,7 +43,8 @@ function Like(){
   var xhr= new XMLHttpRequest();
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
-      
+      var myObj = JSON.parse(this.responseText);
+      document.getElementById("like").innerHTML=myObj.Lyke;
     }
   };
   xhr.open('POST','like.php');
@@ -64,7 +65,8 @@ function Dislike(){
   var xhr= new XMLHttpRequest();
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
-
+      var myObj = JSON.parse(this.responseText);
+      document.getElementById("dislike").innerHTML=myObj.Dislike;
     }
   };
   xhr.open('POST','dislike.php');

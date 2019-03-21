@@ -33,7 +33,7 @@ $dislikes = getDislike();
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-      <script  src="script.js"></script>
+      <script  src="script0.js"></script>
       <link rel="stylesheet" href="main.css">
     <title>Blog</title>
   </head>
@@ -62,9 +62,10 @@ $dislikes = getDislike();
     <p>Les ID online qui n'apparaissaient pas correctement ont été corrigées</p>
     <p>L'ID online ne se déplacera plus si vous décidez de changer la position de la barre de vie</p>
     <p>Et d'autres petits correctifs de bugs idiots</p>
-
-    <img id="like" src="Like.png" alt="" width="50px" onclick="Like();"><?php foreach($likes as $key => $like) echo $like['Lyke'] ?></img>
-    <img id="dislike" src="Dislike.png" alt="" width="50px" onclick="Dislike();"><?php foreach($dislikes as $key => $dislike) echo $dislike['Dislike'] ?></img>
+    <div id="align">
+      <img  src="Like.png" alt="" width="50px" onclick="Like();"><p id="like"><?php foreach($likes as $key => $like) echo $like['Lyke'] ?></p></img>
+      <img  src="Dislike.png" alt="" width="50px" onclick="Dislike();"><p id="dislike"><?php foreach($dislikes as $key => $dislike) echo $dislike['Dislike'] ?></p></img>
+    </div>
     <br>
       <textarea id="comment" name="comm" rows="8" cols="100" size=10 placeholder="Texte" value="" required></textarea><br>
       <input type="submit" onclick="sendMessage();" value="Envoyer"><br><br>

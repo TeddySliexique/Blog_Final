@@ -48,6 +48,7 @@ class Users{
         </ul>
       </nav>
     </header>
+          <?php $nbre=0; ?>
     <section id="ababou">
       <h2>Formulaire</h2>
       <input id="Nom" type="text" placeholder="Nom">
@@ -56,10 +57,10 @@ class Users{
       <br><br>
       <input id="Mail" type="text" placeholder="Mail">
       <br><br>
-      <input onclick="saveUser();" type="submit" name="" value="Ajouter">
+      <input onclick="saveUser('<?php echo $nbre ?>');" type="submit" name="" value="Ajouter">
     <br><br>
     <table id="table" border="2">
-      <?php $nbre=0; ?>
+
       <tr>
         <th>Nom</th>
         <th>Prenom</th>

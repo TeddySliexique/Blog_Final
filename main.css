@@ -49,6 +49,10 @@ header ul li a{
   ),url("Pictures/Cards/wallpaper.jpg");
   background-size: cover, no-repeat;
 }
+#align{
+    display:flex;
+    align-items: flex-end;
+}
 .draw{
   display: flex;
   justify-content: center;
